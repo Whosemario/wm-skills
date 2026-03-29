@@ -1,4 +1,9 @@
-# SKILL: explain-symbol
+---
+name: explain-symbol
+description: 准确解释一个符号在系统中的真实作用，帮助建立项目内的概念词典。
+---
+
+# Explain Symbol
 
 ## Goal
 准确解释一个符号在系统中的真实作用，帮助建立项目内的概念词典。
