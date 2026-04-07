@@ -1,0 +1,6 @@
+interface:
+  display_name: "Capture Web Article"
+  short_description: "Archive a web article to Markdown"
+  default_prompt: "Use $capture-web-article to save a web article URL into a user-specified local directory as a Markdown archive with images."
+policy:
+  allow_implicit_invocation: false
