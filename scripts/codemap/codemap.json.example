@@ -1,0 +1,47 @@
+{
+  "src_root": "src",
+  "output_dir": "codemap",
+  "module_depth": 1,
+
+  "exclude_dirs": [
+    "third_party", "3rdparty", "external", "extern", "vendor",
+    "build", "out", "cmake-build-debug", "cmake-build-release",
+    ".git", ".vs", ".vscode", ".idea", "node_modules", "__pycache__"
+  ],
+
+  "compile_commands": "build/compile_commands.json",
+
+  "default_compile_args": [
+    "-std=c++20",
+    "-xc++",
+    "-DNDEBUG",
+    "-Wno-everything"
+  ],
+
+  "include_paths": [
+    "src",
+    "src/core"
+  ],
+
+  "system_include_paths": [],
+
+  "defines": [
+    "MY_ENGINE_API=",
+    "MY_ENGINE_CORE_API=",
+    "MY_ENGINE_RENDER_API=",
+    "DECLARE_CLASS(x)=",
+    "GENERATED_BODY()="
+  ],
+
+  "libclang_path": null,
+
+  "layering_rules": {
+    "core":      [],
+    "platform":  ["core"],
+    "math":      ["core"],
+    "render":    ["core", "platform", "math"],
+    "physics":   ["core", "math"],
+    "animation": ["core", "math"],
+    "scripting": ["core"]
+  }
+}
