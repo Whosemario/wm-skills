@@ -64,6 +64,27 @@ Skills for AI agents.
 - 这个 skill 只在用户显式调用 `$capture-web-article` 时使用
 - 执行前必须提供 `url` 和 `output_dir`
 
+### `summary-to-html`
+把 Markdown、长文、上传笔记或指定主题总结成一份可翻页的深色 HTML 学习笔记。
+
+适用场景：
+- 想把材料整理成「学习笔记」「复习笔记」或 study notes
+- 希望输出一个可导航的 HTML 幻灯片式页面，而不是普通 Markdown
+- 技术材料需要同时展示文字、代码、公式、表格和 ASCII 图
+- 想要深色编辑风格的笔记页面，用于个人回顾和知识复盘
+
+核心能力：
+- 基于输入材料重新组织章节和页结构，通常生成 10-25 页
+- 使用内置 `template.html` 生成单文件 HTML，无需构建步骤或外部框架
+- 支持封面、概念页、代码页、公式页、对比表格、双栏说明和总结页
+- 保留深色主题、Fraunces 标题、JetBrains Mono 代码和橙色/青绿色强调色
+- 内置键盘和点击导航，支持左右方向键、空格、Home/End 翻页
+
+注意事项：
+- 默认输出为与输入同目录、同 basename 的 `.html` 文件
+- 该模板不是 reveal.js，也不适合 `.pptx`、正式演讲 deck 或打印优化场景
+- 生成后需要确认所有占位符已替换，页码和章节信息保持连续
+
 ### `orchestrate-change`
 OpenSpec 多 Agent 工作流的统一入口，负责编排规划、实现、审查和验证的完整流程。
 
